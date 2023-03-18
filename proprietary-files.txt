@@ -1624,7 +1624,6 @@ odm/lib64/libavcodec.so;DISABLE_DEPS
 odm/lib64/libavformat.so;DISABLE_DEPS
 odm/lib64/libavutil.so;DISABLE_DEPS
 -odm/lib64/libdav1d.so.4;DISABLE_DEPS
-vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/bin/jpegtool
 vendor/bin/recordevent

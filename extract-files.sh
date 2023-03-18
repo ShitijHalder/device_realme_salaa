@@ -57,13 +57,16 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.gnss-service.mediatek|vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "android.hardware.gnss-V1-ndk_platform.so" "android.hardware.gnss-V1-ndk.so" "${2}"
             ;;
-        vendor/bin/hw/android.hardware.media.c2@1.2-mediatek|vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
+        vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "${PATCHELF}" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/bin/mnld|vendor/lib*/libcam.utils.sensorprovider.so|vendor/lib*/libaalservice.so|vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so)
             [ "$2" = "" ] && return 0
             grep -q "android.hardware.sensors@1.0-convert-shared.so" "${2}" || "${PATCHELF}" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "${2}"
+            ;;
+        vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc)
+            sed -i 's/@1.2-mediatek/@1.2-mediatek-64b/g' "${2}"
             ;;
         vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
             grep -q "libcamera_metadata_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
