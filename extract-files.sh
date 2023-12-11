@@ -55,6 +55,7 @@ function blob_fixup {
             grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
             ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek|vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
+            "${PATCHELF}" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/bin/mnld|vendor/lib*/libcam.utils.sensorprovider.so|vendor/lib*/libaalservice.so|vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so)
