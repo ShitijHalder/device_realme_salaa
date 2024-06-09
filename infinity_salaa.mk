@@ -12,14 +12,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/realme/salaa/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Project Infinity stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_salaa
+PRODUCT_NAME := infinity_salaa
 PRODUCT_DEVICE := salaa
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme 7/Narzo 20 Pro/Narzo 30 4G
+
+# Infinity-X Specific Flags
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := SHITIJ.dev
+
+# Gapps
+WITH_GAPPS := true
+TARGET_BUILD_GOOGLE_TELEPHONY := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
