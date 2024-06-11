@@ -16,6 +16,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Call the BCR setup
 $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
 
+# RealmeDirac
+$(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
+
 # Google Camera Go
 PRODUCT_PACKAGES += \
     GoogleCameraGo
