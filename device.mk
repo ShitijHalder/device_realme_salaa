@@ -16,6 +16,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Call the BCR setup
 $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
 
+# Google Camera Go
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
