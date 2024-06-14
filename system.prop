@@ -48,6 +48,11 @@ ro.sys.usb.storage.type=mtp
 ro.sys.usb.charging.only=yes
 ro.sys.usb.bicr=no
 
+# Enable USB Debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
+
 # Storage
 persist.sys.fuse.passthrough.enable=true
 
