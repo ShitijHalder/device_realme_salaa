@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_salaa.mk
+    $(LOCAL_DIR)/everest_salaa.mk
 
 COMMON_LUNCH_CHOICES := \
-    infinity_salaa-user \
-    infinity_salaa-userdebug \
-    infinity_salaa-eng
+    everest_salaa-user \
+    everest_salaa-userdebug \
+    everest_salaa-eng

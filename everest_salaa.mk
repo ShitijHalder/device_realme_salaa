@@ -11,23 +11,30 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # Inherit from device makefile.
 $(call inherit-product, device/realme/salaa/device.mk)
-
-# Inherit some common Project Infinity stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
-
-PRODUCT_NAME := infinity_salaa
+PRODUCT_NAME := everest_salaa
 PRODUCT_DEVICE := salaa
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme 7/Narzo 20 Pro/Narzo 30 4G
 
-# Infinity-X Specific Flags
-INFINITY_BUILD_TYPE := UNOFFICIAL
-INFINITY_MAINTAINER := SHITIJ.dev
+# Inherit some common Everest stuff.
+$(call inherit-product, vendor/everest/config/common_full_phone.mk)
+
+# Boot Animation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Everest Maintainer Stuff
+EVEREST_BUILD_TYPE := UNOFFICIAL
+EVEREST_MAINTAINER := SHITIJ.dev
 
 # Gapps
-WITH_GAPPS := true
-TARGET_BUILD_GOOGLE_TELEPHONY := true
+WITH_GAPPS := true 
+
+# Extra Stuffs
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_BLUR := true
+TARGER_SUPPORTS_NEXT_GEN_ASSISTANT := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
