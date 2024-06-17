@@ -5,7 +5,7 @@ ro.vendor.have_aee_feature=1
 ro.camera.sound.forced=0
 ro.audio.silent=0
 ro.audio.usb.period_us=16000
-ro.config.vc_call_vol_steps=15
+ro.config.vc_call_vol_steps=10
 
 # Brand
 Build.BRAND=MTK
@@ -93,3 +93,79 @@ persist.vendor.wfc.sys_wfc_support=1
 ro.zygote.preload.enable=0
 zygote.critical_window.minute=10
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Power Saving Mode
+ro.mtk_pq.ctrld_dpi_support=1
+ro.power_profile.override=power-save
+
+# CPU Governor for Battery Saving
+ro.config.cpufreq_iops_boost_freq=960000
+ro.config.cpufreq_iops_min_freq=400000
+
+# Memory Optimization
+ro.mtk_aee_mode=Dis
+ro.mtk_cam.aal_function=1
+ro.mtk_perfservice_support=1
+ro.config.sd_cache=1
+ro.config.dha_cached_min=16
+ro.config.dha_cached_max=32
+
+# Display Refresh Rate
+persist.sys.display-rate=90
+
+# Camera Performance
+ro.mtk_cam.mfb.ultimate=1
+
+# Display Settings
+ro.min_pointer_dur=8
+ro.hwui.disable_sc=false
+
+# Display Enhancements
+ro.mtk_display_ovl_support=1
+
+# Network Optimization
+ro.mtk_data_speed_label=true
+ro.mtk_network_management=1
+persist.radio.smart_ap=1
+persist.radio.apm_sim_not_pwdn=1
+
+# Network Performance
+ro.config.hw_fast_dormancy=1
+ro.config.hw_ram=true
+ro.config.hw_fold=true
+ro.config.hw_ram=true
+
+# Thermal Management
+ro.mtk_thermal_monitor.enabled=true
+persist.thermal_config.mitigation=1
+
+# Thermal Configuration
+ro.config.thermal_limit=75
+ro.config.thermal_dcs=40
+
+# GPU Rendering
+ro.sf.lcd_density=380
+debug.hwui.renderer=skiagl
+debug.hwui.render_dirty_regions=false
+
+# GPU Performance Optimization
+debug.sf.hw=1
+ro.mtk_perf_dds_cpu=1
+
+# GPU Optimization
+ro.mtk_gpu_optimizations=1
+
+# Audio Enhancements
+ro.mtk_audio_lossless_support=1
+
+# Audio Performance
+ro.mtk_audenh_support=1
+
+# Audio Tuning
+ro.config.hd_voicemail=1
+persist.sys.audio.out.vol=7
+
+# Battery Optimization
+ro.config.max.starting_bg=4
+ro.sys.fw.bg_apps_limit=4
+pm.sleep_mode=1
