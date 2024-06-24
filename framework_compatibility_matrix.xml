@@ -16,6 +16,16 @@
         <instance>se2</instance>
     </interface>
 </hal>
+<hal format="hidl">
+        <name>android.hardware.configstore</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>ISurfaceFlingerConfigs</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
+    </hal>
 <hal format="aidl" optional="true">
     <name>vendor.lineage.health</name>
     <interface>
