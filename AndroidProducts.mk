@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_salaa.mk
+    $(LOCAL_DIR)/lineage_salaa.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_salaa-user \
-    blaze_salaa-userdebug \
-    blaze_salaa-eng
+    lineage_salaa-user \
+    lineage_salaa-userdebug \
+    lineage_salaa-eng
