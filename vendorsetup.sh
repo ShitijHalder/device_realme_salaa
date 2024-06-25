@@ -22,4 +22,13 @@ curl -O https://raw.githubusercontent.com/ShitijHalder/Key-Gen-signed-script/mai
 chmod +x generate_all_keys.sh
 ./generate_all_keys.sh
 
+# Make the build faster using ccache
+export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
+ccache -M 50G
+ccache -o compression=true
+
+# Disable and stop systemd-oomd service.
+systemctl disable --now systemd-oomd
+
 
