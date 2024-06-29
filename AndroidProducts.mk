@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_salaa.mk
+    $(LOCAL_DIR)/droidx_salaa.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_salaa-user \
-    lineage_salaa-userdebug \
-    lineage_salaa-eng
+    droidx_salaa-ap1a-user \
+    droidx_salaa-ap1a-userdebug \
+    droidx_salaa-ap1a-eng

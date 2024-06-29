@@ -10,26 +10,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # Inherit from device makefile.
 $(call inherit-product, device/realme/salaa/device.mk)
-PRODUCT_NAME := lineage_salaa
+PRODUCT_NAME := droidx_salaa
 PRODUCT_DEVICE := salaa
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme 7/Narzo 20 Pro/Narzo 30 4G
 
-# Inherit some common RisingOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RISING_CHIPSET="Frying Pan Memelio G69" \
-    RISING_MAINTAINER="SHITIJ.dev"
+# Inherit some common DroidX-UI stuff.
+$(call inherit-product, vendor/droidx/config/common_full_phone.mk)
+# DroidX-UI additions
+DROIDX_GAPPS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_PIXEL_CHARGE_ANIM := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_ENABLE_BLUR := true
-WITH_GMS := true
-TARGET_CORE_GMS := true
-TARGET_CORE_GMS_EXTRAS := false
-# Wether to ship pixel launcher and set it as default launcher
-TARGET_DEFAULT_PIXEL_LAUNCHER := true
-# whether to ship aperture camera, default is true
-PRODUCT_NO_CAMERA := false
-RISING_BUILDTYPE := UNOFFICIAL
+
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
