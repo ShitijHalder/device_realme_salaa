@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/droidx_salaa.mk
+    $(LOCAL_DIR)/everest_salaa.mk
 
 COMMON_LUNCH_CHOICES := \
-    droidx_salaa-ap1a-user \
-    droidx_salaa-ap1a-userdebug \
-    droidx_salaa-ap1a-eng
+    everest_salaa-user \
+    everest_salaa-userdebug \
+    everest_salaa-eng
