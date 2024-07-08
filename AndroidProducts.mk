@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/everest_salaa.mk
+    $(LOCAL_DIR)/derp_salaa.mk
 
 COMMON_LUNCH_CHOICES := \
-    everest_salaa-user \
-    everest_salaa-userdebug \
-    everest_salaa-eng
+    derp_salaa-user \
+    derp_salaa-userdebug \
+    derp_salaa-eng
