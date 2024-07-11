@@ -24,9 +24,9 @@ chmod +x generate_all_keys.sh
 
 # Make the build faster using ccache
 export USE_CCACHE=1
-export CCACHE_EXEC=/usr/bin/ccache
-ccache -M 50G
-ccache -o compression=true
+export CCACHE_COMPRESS=1
+export CCACHE_DIR=~/ccache
+export CCACHE_MAXSIZE=50G
 
 # Disable and stop systemd-oomd service.
 systemctl disable --now systemd-oomd
