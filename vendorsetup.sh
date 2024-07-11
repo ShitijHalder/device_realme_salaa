@@ -1,3 +1,52 @@
+#!/bin/bash
+
+# Menu options
+menu_option=""
+
+while [[ "$menu_option" != "1" && "$menu_option" != "2" ]]; do
+  echo "Select build type:"
+  echo "  1) Vanilla"
+  echo "  2) GApps"
+  read -r menu_option
+
+  if [[ "$menu_option" != "1" && "$menu_option" != "2" ]]; then
+    echo "Invalid choice. Please select 1 for Vanilla or 2 for GApps."
+  fi
+done
+
+# Process user choice
+case $menu_option in
+  1)
+    # Check if lines already exist (modify pattern for exact match)
+    if grep -qE '^BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE\s+:=.*' device/realme/salaa/BoardConfig.mk && \
+       grep -qE '^BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE\s+:=.*' device/realme/salaa/BoardConfig.mk && \
+       grep -qE '^BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE\s+:=.*' device/realme/salaa/BoardConfig.mk; then
+      echo "Lines already present in BoardConfig.mk, skipping edit."
+    else
+      # Edit BoardConfig.mk (Vanilla)
+      # Explicit path to BoardConfig.mk
+      boardconfig_file="device/realme/salaa/BoardConfig.mk"
+
+      if [[ ! -f "$boardconfig_file" ]]; then
+        echo "Error: BoardConfig.mk not found at $boardconfig_file."
+        exit 1
+      fi
+
+      # Insert lines at line 83 using awk (more robust for potential leading/trailing whitespace)
+      awk 'NR==83 {print; print "BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1073741824\nBOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1073741824\nBOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 536870912"} 1' "$boardconfig_file" > /tmp/edited_boardconfig.mk && mv /tmp/edited_boardconfig.mk "$boardconfig_file"
+      echo "BoardConfig.mk edited for Vanilla build."
+    fi
+    ;;
+  2)
+    echo "No changes required for GApps build."
+    ;;
+  *)
+    echo "Unexpected error occurred."
+    ;;
+esac
+
+
+
 # Cloning required repositories for making rum:
 
 # Kernel and Vendor Source:
@@ -30,5 +79,3 @@ export CCACHE_MAXSIZE=50G
 
 # Disable and stop systemd-oomd service.
 systemctl disable --now systemd-oomd
-
-
