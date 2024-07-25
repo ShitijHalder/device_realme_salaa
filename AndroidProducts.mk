@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_salaa.mk
+    $(LOCAL_DIR)/lineage_salaa.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_salaa-user \
-    derp_salaa-userdebug \
-    derp_salaa-eng
+    lineage_salaa-user \
+    lineage_salaa-userdebug \
+    lineage_salaa-eng
