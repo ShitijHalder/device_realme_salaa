@@ -51,6 +51,9 @@ done
 
 function blob_fixup {
     case "$1" in
+        system_ext/lib64/libsource.so)
+            grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
+            ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek|vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
