@@ -97,6 +97,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4.vendor \
     android.hardware.camera.provider@2.5.vendor \
     android.hardware.camera.provider@2.6.vendor \
+    libexpat.vendor:64 \
+    libpng.vendor:64 \
     libcamera2ndk_vendor
 
 PRODUCT_PACKAGES += \
@@ -120,11 +122,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.allocator@4.0.vendor \
     android.hardware.graphics.common-V2-ndk_platform.vendor \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.memtrack-service.mediatek-mali \
     libdrm.vendor \
     libdrm \
-    libion
+    libion \
+    libion.vendor \
+    libui.vendor
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -140,7 +145,9 @@ PRODUCT_COPY_FILES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-impl:64 \
+    libgatekeeper.vendor:64
 
 # GNSS
 PRODUCT_PACKAGES += \
@@ -151,6 +158,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss@2.1.vendor:64 \
+    libcurl.vendor:32 \
     android.hardware.gnss-V1-ndk_platform.vendor
 
 # Health
@@ -164,7 +173,8 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    libhidlmemory.vendor:64
 
 # IMS
 PRODUCT_BOOT_JARS += \
@@ -193,6 +203,9 @@ PRODUCT_PACKAGES += \
     libsoft_attestation_cert.vendor:64 \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl
+    libkeymaster_portable.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libnetutils.vendor:64
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -398,7 +411,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1.vendor \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
     android.frameworks.sensorservice@1.0.vendor \
-    libsensorndkbridge
+    libsensorndkbridge \
+    android.hardware.sensors@2.0.vendor:64 \
+    libpower.vendor:64 \
+    libshim_sensors
 
 # Soundtrigger
 PRODUCT_PACKAGES += \
@@ -434,6 +450,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so \
     prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
+
+PRODUCT_PACKAGES += \
+    libunwindstack.vendor \
+    libutilscallstack.vendor
 
 PRODUCT_PACKAGES += \
     libshim_ui
