@@ -5,6 +5,7 @@
  */
 
 #include <stdint.h>
+#include <sync/sync.h>
 #include <ui/GraphicBufferMapper.h>
 #include <ui/Rect.h>
 #include <utils/Errors.h>
