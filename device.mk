@@ -202,7 +202,7 @@ PRODUCT_PACKAGES += \
     libkeymaster4support.vendor:64 \
     libsoft_attestation_cert.vendor:64 \
     libkeystore-wifi-hidl \
-    libkeystore-engine-wifi-hidl
+    libkeystore-engine-wifi-hidl \
     libkeymaster_portable.vendor:64 \
     libkeymaster_messages.vendor:64 \
     libnetutils.vendor:64
