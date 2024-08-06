@@ -443,8 +443,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
 # VNDK
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/com.android.vndk.current.on_vendor.apex:$(TARGET_COPY_OUT_VENDOR)/apex/com.android.vndk.current.on_vendor.apex
-
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so \
     prebuilts/vndk/v33/arm64/arch-arm-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so
