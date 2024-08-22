@@ -99,7 +99,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor \
     libexpat.vendor:64 \
     libpng.vendor:64 \
-    libcamera2ndk_vendor
+    libcamera2ndk_vendor \
+    libexif.vendor
 
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim
@@ -163,6 +164,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.1.vendor:64 \
+    libcurl.vendor \
     libcurl.vendor:32 \
     android.hardware.gnss-V1-ndk_platform.vendor
 
@@ -421,7 +423,8 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     android.hardware.sensors@2.0.vendor:64 \
     libpower.vendor:64 \
-    libshim_sensors
+    libshim_sensors \
+    libdumpstateutil.vendor
 
 # Soundtrigger
 PRODUCT_PACKAGES += \
