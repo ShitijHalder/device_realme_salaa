@@ -1,0 +1,5 @@
+# Infinity-X Props
+ro.infinity.soc=Helio G95
+ro.infinity.battery=5000mAh
+ro.infinity.display=1080x2400, 90Hz
+ro.infinity.camera=48MP + 8MP + 2MP, 16MP
