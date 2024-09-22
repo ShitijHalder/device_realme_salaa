@@ -164,3 +164,8 @@ persist.sys.audio.out.vol=7
 ro.config.max.starting_bg=4
 ro.sys.fw.bg_apps_limit=4
 pm.sleep_mode=1
+
+# DroidX Properties
+ro.droidx.maintainer= SHITIJ.dev
+ro.droidx.chipset=Helio G95
+ro.droidx.display_resolution=6.5" IPS LCD 1080x2400
