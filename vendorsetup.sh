@@ -57,11 +57,25 @@ git clone https://github.com/ShitijHalder/vendor_realme_salaa vendor/realme/sala
 git clone https://github.com/ShitijHalder/android_hardware_mediatek hardware/mediatek
 git clone https://github.com/ShiChiyooo/platform_hardware_oplus hardware/oplus
 
-# Mediatek SEPolicy VNDR:
-git clone https://github.com/ShitijHalder/android_device_mediatek_sepolicy_vndr device/mediatek/sepolicy_vndr
+# Confirmation prompt for both repositories
+read -p "Keep the existing sauce or get a freshly cooked one for both Mediatek & Lineage SEPolicy? [y/N]: " confirm
 
-# Lineage SEPolicy:
-git clone https://github.com/LineageOS/android_device_lineage_sepolicy device/lineage/sepolicy
+if [[ $confirm =~ ^[Yy]$ ]]; then
+    # Mediatek SEPolicy VNDR:
+    if [ -d "device/mediatek/sepolicy_vndr" ]; then
+        rm -rf device/mediatek/sepolicy_vndr
+    fi
+    git clone https://github.com/ShitijHalder/android_device_mediatek_sepolicy_vndr device/mediatek/sepolicy_vndr
+
+    # Lineage SEPolicy:
+    if [ -d "device/lineage/sepolicy" ]; then
+        rm -rf device/lineage/sepolicy
+    fi
+    git clone https://github.com/LineageOS/android_device_lineage_sepolicy device/lineage/sepolicy
+else
+    echo "Skipping Mediatek & Lineage SEPolicy clones."
+fi
+
 
 # Basic Call Recorder (BCR):
 git clone https://github.com/kenway214/vendor_bcr.git vendor/bcr
