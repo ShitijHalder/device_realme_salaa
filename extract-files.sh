@@ -62,9 +62,6 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             grep -q "android.hardware.sensors@1.0-convert-shared.so" "${2}" || "${PATCHELF}" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "${2}"
             ;;
-        vendor/lib64/libwifi-hal-mtk.so)
-            "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
-            ;;
         vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
             grep -q "libcamera_metadata_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
