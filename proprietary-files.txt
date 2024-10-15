@@ -1,7 +1,7 @@
 # Device proprietary files - from RMX2156_11_F.17, unless pinned
 
 # ADSP
-vendor/lib64/libadsprpc.so
+vendor/lib64/libadsprpc.so;DISABLE_DEPS
 
 # AAL
 vendor/lib/libaal_cust.so
@@ -282,7 +282,7 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # CDSP
-vendor/lib64/libcdsprpc.so
+vendor/lib64/libcdsprpc.so;DISABLE_DEPS
 
 # Camera
 odm/lib64/libCipCommon.so
