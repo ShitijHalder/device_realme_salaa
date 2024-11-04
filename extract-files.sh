@@ -67,9 +67,17 @@ function blob_fixup {
             grep -q "libcamera_metadata_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
+        vendor/lib64/libmnl.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libcutils.so" "${2}" || "${PATCHELF}" --add-needed "libcutils.so" "${2}"
+            ;;
         vendor/lib64/libmtkcam_featurepolicy.so)
             # evaluateCaptureConfiguration()
             sed -i "s/\x34\xE8\x87\x40\xB9/\x34\x28\x02\x80\x52/" "$2"
+            ;;
+        vendor/lib64/libSQLiteModule_VER_ALL.so|vendor/lib64/lib3a.flash.so)
+            [ "$2" = "" ] && return 0
+            grep -q "liblog.so" "${2}" || "${PATCHELF_0_17_2}" --add-needed "liblog.so" "${2}"
             ;;
         vendor/lib*/hw/android.hardware.thermal@2.0-impl.so|vendor/lib*/hw/vendor.mediatek.hardware.pq@2.13-impl.so|vendor/lib*/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
