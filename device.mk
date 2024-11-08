@@ -280,6 +280,9 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.0.vendor \
     android.hardware.usb.gadget@1.1.vendor
 
+# Update
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
