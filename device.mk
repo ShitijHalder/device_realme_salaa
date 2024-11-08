@@ -281,6 +281,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.1.vendor
 
 # Update
+AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # Overlays
