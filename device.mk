@@ -480,6 +480,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
+    libcld80211 \
     hostapd \
     libwifi-hal-wrapper \
     wpa_supplicant
