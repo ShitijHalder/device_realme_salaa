@@ -481,7 +481,7 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.control@1.1.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
+    android.hardware.wifi-service.legacy \
     libcld80211 \
     hostapd \
     libwifi-hal-wrapper \
