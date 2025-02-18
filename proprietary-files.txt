@@ -139,6 +139,7 @@ vendor/lib/hw/audio.primary.mt6785.so
 vendor/lib/hw/audio.r_submix.mt6785.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
+vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 
 # Audio (Configs)
 odm/etc/audio/audio_device/common/audio_device.xml
@@ -2139,6 +2140,7 @@ vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/libforkexecwrap.so
+vendor/lib64/libwifitest.so
 vendor/lib64/libwo.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
