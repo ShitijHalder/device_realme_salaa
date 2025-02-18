@@ -41,6 +41,18 @@ function lib_to_package_fixup_vendor_variants() {
         vendor.mediatek.hardware.videotelephony@1.0)
             echo "${1}_vendor"
             ;;
+        libhwm-oplus)
+            echo "${1}_odm"
+            ;;
+        libremosaic_wrapper)
+            echo "${1}_odm"
+            ;;
+        libremosaiclib)
+            echo "${1}_odm"
+            ;;
+        vendor.oplus.hardware.commondcs@1.0)
+            echo "${1}_odm"
+            ;;
         *)
             return 1
             ;;

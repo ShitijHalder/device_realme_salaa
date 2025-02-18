@@ -307,8 +307,8 @@ odm/lib64/libarcsoft_scbokeh_video.so
 odm/lib64/libarcsoft_sn_mtk_apu.so
 odm/lib64/libarcsoft_super_night_raw_mtk.so
 odm/lib64/libcalibverifyW_T.so
-odm/lib64/libremosaic_wrapper.so
-odm/lib64/libremosaiclib.so
+odm/lib64/libremosaic_wrapper.so;MODULE_SUFFIX=_odm
+odm/lib64/libremosaiclib.so;MODULE_SUFFIX=_odm
 odm/lib64/libstfaceunlockppl.so
 odm/lib64/libtfavib.so
 odm/lib64/vendor.oplus.hardware.engcamera@1.0.so
@@ -1345,7 +1345,7 @@ odm/lib64/libgf_hal_G5.so
 odm/lib64/libgf_hal_G6.so
 odm/lib64/libgf_hal_G7.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
-odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
+odm/lib64/vendor.oplus.hardware.commondcs@1.0.so;MODULE_SUFFIX=_odm
 odm/init.oplus.fingerprints.rc
 odm/init.oplus.seccommon.rc
 vendor/lib/vendor.oplus.hardware.commondcs@1.0.so
@@ -1984,7 +1984,7 @@ odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc
 odm/etc/sensor/sensor_config.json
 -odm/etc/vintf/manifest/manifest_oplusSensor.xml
 odm/lib/vendor.oplus.hardware.oplusSensor@1.0.so
-odm/lib64/libhwm-oplus.so
+odm/lib64/libhwm-oplus.so;MODULE_SUFFIX=_odm
 odm/lib64/oplus.sensors.ssc.so
 odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so
 vendor/etc/sensors/hals.conf
