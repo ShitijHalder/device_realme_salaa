@@ -6,8 +6,6 @@
 
 DEVICE_PATH := device/realme/salaa
 
-BUILD_BROKEN_DUP_RULES := true
-
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
