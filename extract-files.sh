@@ -58,7 +58,8 @@ function blob_fixup {
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/bin/mnld|vendor/lib*/libcam.utils.sensorprovider.so|vendor/lib*/libaalservice.so|vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so)
-            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-hidl.so" "$2"
+            [ "$2" = "" ] && return 0
+            grep -q "android.hardware.sensors@1.0-convert-shared.so" "${2}" || "${PATCHELF}" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "${2}"
             ;;
         vendor/lib64/libwifi-hal-mtk.so)
             "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
