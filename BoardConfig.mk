@@ -108,6 +108,7 @@ BOARD_HAS_MTK_HARDWARE := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Properties
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/phoneinfo.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
