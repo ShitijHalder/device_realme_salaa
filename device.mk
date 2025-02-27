@@ -170,7 +170,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor:64 \
     libcurl.vendor \
     libcurl.vendor:32 \
-    android.hardware.gnss-V1-ndk_platform.vendor
+    android.hardware.gnss-V1-ndk.vendor
 
 # Health
 PRODUCT_PACKAGES += \
