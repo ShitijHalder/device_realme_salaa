@@ -66,16 +66,11 @@ git clone https://github.com/ShitijHalder/android_device_lineage_sepolicy device
 # Basic Call Recorder (BCR):
 git clone https://github.com/kenway214/vendor_bcr.git vendor/bcr
 
-# Custom KeyGen
-curl -O https://raw.githubusercontent.com/ShitijHalder/Key-Gen-signed-script/main/generate_all_keys.sh
-chmod +x generate_all_keys.sh
-./generate_all_keys.sh
-
 # Make the build faster using ccache
 export USE_CCACHE=1
 export CCACHE_COMPRESS=1
 export CCACHE_DIR=~/ccache
 export CCACHE_MAXSIZE=50G
 
-# Disable and stop systemd-oomd service.
-systemctl disable --now systemd-oomd
+# Disable and stop systemd-oomd service.(Enable Manually)
+#systemctl disable --now systemd-oomd
